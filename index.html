@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>访问路径树状图</title>
+	<link rel="stylesheet" type="text/css" href="chart.css">
+</head>
+<body>
+<div class="page-flow-legend" style="display:none;">点击<i class="shezhi"></i>将当前页面设置成根节点，点击<i class="detail"></i>查看详情。</div>
+	 <div id="CustomFlowContainer" >
+        <div class="site-flow clearfix" id='CustomFlow'></div>
+        <div id="flowBarRight" class="slide-bar slide-right" style="display:none;">
+            <div></div>
+        </div>
+        <div id="flowBarLeft" class="slide-bar slide-left" style="display:none;">
+            <div></div>
+        </div>
+        <div class="loading"></div>
+    </div> 
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+	<script type="text/javascript" src="tangram.js"></script>
+	<script type="text/javascript" src="baiducommon.js"></script>
+	<script type="text/javascript" src="charts.js"></script>
+	<script type="text/javascript">
+    var b = {
+        "page": {
+            "id": "1307222942698719220",
+            "name": "搜索页",
+            "pv": 554,
+            "uv":222,
+            "average_stay_time": 14,
+            "bounce_ratio": 11.19,
+            "page_bounce_num": "62",
+            "page_path":'受饿222'
+        },
+        "list": [
+            {
+                "id": "1307222942698719220",
+                "name": "搜索页",
+                "path_hierarchy":2
+            },
+            {
+                "id": "3832653999733786092",
+                "name": "2.0首页精彩推荐tab",
+                "path_hierarchy":2
+            },
+            {
+                "id": "1331578830572162377",
+                "name": "在线词条页",
+                "path_hierarchy":2
+            },
+            {
+                "id": "1273450876011156565",
+                "name": "我的百科页",
+                "path_hierarchy":3
+            },
+            {
+                "id": "6874294510158178678",
+                "name": "离线词条页"
+            },
+            {
+                "id": "18265901616402187450",
+                "name": "2.0搜索结果页"
+            },
+            {
+                "id": "368836715157235893",
+                "name": "更多页"
+            },
+            {
+                "id": "1136401842274026624",
+                "name": "浏览历史页"
+            },
+            {
+                "id": "387133791190689752",
+                "name": "图片页（不含翻页）"
+            },
+            {
+                "id": "11759886184568708250",
+                "name": "2.0首页历史上的今天tab"
+            },
+            {
+                "id": "6878234077500369270",
+                "name": "设置页"
+            },
+            {
+                "id": "391931471459491615",
+                "name": "首页_精彩词条"
+            },
+            {
+                "id": "1127946520564291436",
+                "name": "目录页"
+            },
+            {
+                "id": "1277071460433585593",
+                "name": "分享页"
+            },
+            {
+                "id": "1126176521415890532",
+                "name": "图册页"
+            },
+            {
+                "id": "396741504296515047",
+                "name": "关于页"
+            },
+            {
+                "id": "1195798688351748856",
+                "name": "反馈页"
+            },
+            {
+                "id": "11179699352016209685",
+                "name": "离线管理页"
+            }
+        ],
+        "down_page": [
+            {
+                "fields": [
+                    "visit_next_page_title",
+                    "next_alias_title",
+                    "next_count",
+                    "next_ratio"
+                ],
+                "items": [
+                    [
+                        { 
+                            "id": "1331578830572162377",//id
+					      	"path_hierarchy":1,//层级
+					      	"name": "在线词条页",//名称
+					      	"uv":111,//uv
+					      	"pv":11,//pv
+					      	"average_stay_time":11,//平均访问时长
+					      	"bounce_ratio":11, //页面跳出率
+					      	"page_bounce_num":11 ,//页面跳出数
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "18265901616402187450",
+                            "name": "2.0搜索结果页",
+                            "uv":222,
+                            "pv":12,//pv
+					      	"average_stay_time":12,//平均访问时长
+					      	"bounce_ratio":12, //页面跳出率
+					      	"page_bounce_num":12, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "3832653999733786092",
+                            "name": "2.0首页精彩推荐tab",
+                            "uv":333,
+                            "pv":13,//pv
+					      	"average_stay_time":13,//平均访问时长
+					      	"bounce_ratio":13, //页面跳出率
+					      	"page_bounce_num":13 ,//页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "6874294510158178678",
+                            "name": "离线词条页",
+                            "uv":444,
+                            "pv":14,//pv
+					      	"average_stay_time":120,//平均访问时长
+					      	"bounce_ratio":14, //页面跳出率
+					      	"page_bounce_num":14, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "1307222942698719220",
+                            "name": "搜索页",
+                            "uv":555,
+                            "pv":15,//pv
+					      	"average_stay_time":15,//平均访问时长
+					      	"bounce_ratio":15, //页面跳出率
+					      	"page_bounce_num":15, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "18265901616402187450",
+                            "name": "2.0搜索结果页",
+                            "uv":222,
+                            "pv":16,//pv
+					      	"average_stay_time":16,//平均访问时长
+					      	"bounce_ratio":16, //页面跳出率
+					      	"page_bounce_num":16, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "3832653999733786092",
+                            "name": "2.0首页精彩推荐tab",
+                            "uv":333,
+                            "pv":17,//pv
+					      	"average_stay_time":17,//平均访问时长
+					      	"bounce_ratio":17, //页面跳出率
+					      	"page_bounce_num":17, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "6874294510158178678",
+                            "name": "离线词条页",
+                            "uv":444,
+                            "pv":18,//pv
+					      	"average_stay_time":18,//平均访问时长
+					      	"bounce_ratio":18, //页面跳出率
+					      	"page_bounce_num":18, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "1307222942698719220",
+                            "name": "搜索页",
+                            "uv":555,
+                            "pv":19,//pv
+					      	"average_stay_time":19,//平均访问时长
+					      	"bounce_ratio":19, //页面跳出率
+					      	"page_bounce_num":19, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "18265901616402187450",
+                            "name": "2.0搜索结果页",
+                            "uv":222,
+                            "pv":20,//pv
+					      	"average_stay_time":20,//平均访问时长
+					      	"bounce_ratio":20, //页面跳出率
+					      	"page_bounce_num":20, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "3832653999733786092",
+                            "name": "2.0首页精彩推荐tab",
+                            "uv":333,
+                            "pv":21,//pv
+					      	"average_stay_time":21,//平均访问时长
+					      	"bounce_ratio":21, //页面跳出率
+					      	"page_bounce_num":21, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "6874294510158178678",
+                            "name": "离线词条页",
+                            "uv":444,
+                            "pv":22,//pv
+					      	"average_stay_time":22,//平均访问时长
+					      	"bounce_ratio":22, //页面跳出率
+					      	"page_bounce_num":22, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "1307222942698719220",
+                            "name": "搜索页",
+                            "uv":555,
+                            "pv":23,//pv
+					      	"average_stay_time":23,//平均访问时长
+					      	"bounce_ratio":23, //页面跳出率
+					      	"page_bounce_num":23, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "1127946520564291436",
+                            "name": "目录页",
+                            "uv":666,
+                            "pv":24,//pv
+					      	"average_stay_time":24,//平均访问时长
+					      	"bounce_ratio":24, //页面跳出率
+					      	"page_bounce_num":24, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "11759886184568708250",
+                            "name": "2.0首页历史上的今天tab",
+                            "uv":777,
+                            "pv":25,//pv
+					      	"average_stay_time":25,//平均访问时长
+					      	"bounce_ratio":25, //页面跳出率
+					      	"page_bounce_num":25, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": 0,
+                            "name": "离开应用",
+                            "uv":999,
+                            "pv":26,//pv
+					      	"average_stay_time":26,//平均访问时长
+					      	"bounce_ratio":26, //页面跳出率
+					      	"page_bounce_num":26, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ]
+                ]
+            },
+            {
+                "fields": [
+                    "visit_next_page_title",
+                    "next_alias_title",
+                    "next_count",
+                    "next_ratio"
+                ],
+                 "items": [
+                    [
+                        { 
+                            "id": "1331578830572162377",//id
+					      	"path_hierarchy":1,//层级
+					      	"name": "在线词条页",//名称
+					      	"uv":111,//uv
+					      	"pv":11,//pv
+					      	"average_stay_time":11,//平均访问时长
+					      	"bounce_ratio":11, //页面跳出率
+					      	"page_bounce_num":11 ,//页面跳出数
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "18265901616402187450",
+                            "name": "2.0搜索结果页",
+                            "uv":222,
+                            "pv":12,//pv
+					      	"average_stay_time":12,//平均访问时长
+					      	"bounce_ratio":12, //页面跳出率
+					      	"page_bounce_num":12, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "3832653999733786092",
+                            "name": "2.0首页精彩推荐tab",
+                            "uv":333,
+                            "pv":13,//pv
+					      	"average_stay_time":13,//平均访问时长
+					      	"bounce_ratio":13, //页面跳出率
+					      	"page_bounce_num":13 ,//页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "6874294510158178678",
+                            "name": "离线词条页",
+                            "uv":444,
+                            "pv":14,//pv
+					      	"average_stay_time":120,//平均访问时长
+					      	"bounce_ratio":14, //页面跳出率
+					      	"page_bounce_num":14, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "1307222942698719220",
+                            "name": "搜索页",
+                            "uv":555,
+                            "pv":15,//pv
+					      	"average_stay_time":15,//平均访问时长
+					      	"bounce_ratio":15, //页面跳出率
+					      	"page_bounce_num":15, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "18265901616402187450",
+                            "name": "2.0搜索结果页",
+                            "uv":222,
+                            "pv":16,//pv
+					      	"average_stay_time":16,//平均访问时长
+					      	"bounce_ratio":16, //页面跳出率
+					      	"page_bounce_num":16, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "3832653999733786092",
+                            "name": "2.0首页精彩推荐tab",
+                            "uv":333,
+                            "pv":17,//pv
+					      	"average_stay_time":17,//平均访问时长
+					      	"bounce_ratio":17, //页面跳出率
+					      	"page_bounce_num":17, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "6874294510158178678",
+                            "name": "离线词条页",
+                            "uv":444,
+                            "pv":18,//pv
+					      	"average_stay_time":18,//平均访问时长
+					      	"bounce_ratio":18, //页面跳出率
+					      	"page_bounce_num":18, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "1307222942698719220",
+                            "name": "搜索页",
+                            "uv":555,
+                            "pv":19,//pv
+					      	"average_stay_time":19,//平均访问时长
+					      	"bounce_ratio":19, //页面跳出率
+					      	"page_bounce_num":19, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "18265901616402187450",
+                            "name": "2.0搜索结果页",
+                            "uv":222,
+                            "pv":20,//pv
+					      	"average_stay_time":20,//平均访问时长
+					      	"bounce_ratio":20, //页面跳出率
+					      	"page_bounce_num":20, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "3832653999733786092",
+                            "name": "2.0首页精彩推荐tab",
+                            "uv":333,
+                            "pv":21,//pv
+					      	"average_stay_time":21,//平均访问时长
+					      	"bounce_ratio":21, //页面跳出率
+					      	"page_bounce_num":21, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "6874294510158178678",
+                            "name": "离线词条页",
+                            "uv":444,
+                            "pv":22,//pv
+					      	"average_stay_time":22,//平均访问时长
+					      	"bounce_ratio":22, //页面跳出率
+					      	"page_bounce_num":22, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+                    [
+                        {
+                            "id": "1307222942698719220",
+                            "name": "搜索页",
+                            "uv":555,
+                            "pv":23,//pv
+					      	"average_stay_time":23,//平均访问时长
+					      	"bounce_ratio":23, //页面跳出率
+					      	"page_bounce_num":23, //页面跳出数
+					      	"path_hierarchy":1,//层级
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ],
+					[
+                        {
+                            "id": 0,
+					      	"proportionof":30 /* 占比*/
+                        }
+                    ]
+                ]
+            }
+        ]
+    };
+    var b2 ={"page":{"id":"6874294510158178678","name":"离线词条页","pv_count":175,"average_stay_time":234,"bounce_ratio":36,"exit_count":"63"},"list":[{"id":"1307222942698719220","name":"搜索页"},{"id":"3832653999733786092","name":"2.0首页精彩推荐tab"},{"id":"1331578830572162377","name":"在线词条页"},{"id":"1273450876011156565","name":"我的百科页"},{"id":"6874294510158178678","name":"离线词条页"},{"id":"18265901616402187450","name":"2.0搜索结果页"},{"id":"368836715157235893","name":"更多页"},{"id":"1136401842274026624","name":"浏览历史页"},{"id":"387133791190689752","name":"图片页（不含翻页）"},{"id":"11759886184568708250","name":"2.0首页历史上的今天tab"},{"id":"6878234077500369270","name":"设置页"},{"id":"391931471459491615","name":"首页_精彩词条"},{"id":"1127946520564291436","name":"目录页"},{"id":"1277071460433585593","name":"分享页"},{"id":"1126176521415890532","name":"图册页"},{"id":"396741504296515047","name":"关于页"},{"id":"1195798688351748856","name":"反馈页"},{"id":"11179699352016209685","name":"离线管理页"}],"down_page":[{"fields":["visit_next_page_title","next_alias_title","next_count","next_ratio"],"items":[[{"id":"1273450876011156565","name":"我的百科页"},"77",44],[{"id":"1307222942698719220","name":"搜索页"},"18",10.29],[{"id":"1331578830572162377","name":"在线词条页"},"10",5.71],[{"id":"1136401842274026624","name":"浏览历史页"},"5",2.86],[{"id":"6874294510158178678","name":"离线词条页"},"2",1.14],[{"id":0,"name":"离开应用"},"63",36]]},{"fields":["visit_next_page_title","next_alias_title","next_count","next_ratio"],"items":[[{"id":"6874294510158178678","name":"离线词条页"},"118",25.2],[{"id":"1331578830572162377","name":"在线词条页"},"19",4.06],[{"id":"368836715157235893","name":"更多页"},"12",2.56],[{"id":"3832653999733786092","name":"2.0首页精彩推荐tab"},"6",1.28],[{"id":"1273450876011156565","name":"我的百科页"},"1",0.21],[{"id":"1127946520564291436","name":"目录页"},"1",0.21],[{"id":0,"name":"离开应用"},"49",10.47]]}]};
+    var b3={"page":{"id":"1273450876011156565","name":"我的百科页","pv_count":206,"average_stay_time":10,"bounce_ratio":23.79,"exit_count":"49"},"list":[{"id":"1307222942698719220","name":"搜索页"},{"id":"3832653999733786092","name":"2.0首页精彩推荐tab"},{"id":"1331578830572162377","name":"在线词条页"},{"id":"1273450876011156565","name":"我的百科页"},{"id":"6874294510158178678","name":"离线词条页"},{"id":"18265901616402187450","name":"2.0搜索结果页"},{"id":"368836715157235893","name":"更多页"},{"id":"1136401842274026624","name":"浏览历史页"},{"id":"387133791190689752","name":"图片页（不含翻页）"},{"id":"11759886184568708250","name":"2.0首页历史上的今天tab"},{"id":"6878234077500369270","name":"设置页"},{"id":"391931471459491615","name":"首页_精彩词条"},{"id":"1127946520564291436","name":"目录页"},{"id":"1277071460433585593","name":"分享页"},{"id":"1126176521415890532","name":"图册页"},{"id":"396741504296515047","name":"关于页"},{"id":"1195798688351748856","name":"反馈页"},{"id":"11179699352016209685","name":"离线管理页"}],"down_page":[{"fields":["visit_next_page_title","next_alias_title","next_count","next_ratio"],"items":[[{"id":"6874294510158178678","name":"离线词条页"},"118",57.28],[{"id":"1331578830572162377","name":"在线词条页"},"19",9.22],[{"id":"368836715157235893","name":"更多页"},"12",5.83],[{"id":"3832653999733786092","name":"2.0首页精彩推荐tab"},"6",2.91],[{"id":"1273450876011156565","name":"我的百科页"},"1",0.49],[{"id":"1127946520564291436","name":"目录页"},"1",0.49],[{"id":0,"name":"离开应用"},"49",23.79]]},{"fields":["visit_next_page_title","next_alias_title","next_count","next_ratio"],"items":[[{"id":"1273450876011156565","name":"我的百科页"},"77",25.2],[{"id":"1307222942698719220","name":"搜索页"},"18",5.89],[{"id":"1331578830572162377","name":"在线词条页"},"10",3.27],[{"id":"1136401842274026624","name":"浏览历史页"},"5",1.64],[{"id":"6874294510158178678","name":"离线词条页"},"2",0.65],[{"id":0,"name":"离开应用"},"63",20.62]]}]}
+    function initTree(b){
+        var CustomFlow = new T.charts.AppFlow(b, {
+	         minHeight: 950,
+	         maxDepth:7,
+            containerId: "CustomFlow",
+            baseUri: "/web",
+            webRoot: "/web/asdas",
+            siteId: "",
+            monitorPageList: b.list,
+            inputList:null,
+            getNextFlowData: function (e, c, d) { 		/*查询节点 d 对象中存储需要的数据*/		
+                CustomFlow.drawDownFlowDetail(b.down_page[0], d,function(){
+                	$('#CustomFlowContainer').scrollLeft( parseInt($('#CustomFlowContainer').scrollLeft())+300)
+                });
+                $('#CustomFlowContainer .loading').show();
+            },
+            getInfoData: function (c) { 
+                CustomFlow.showPageTip(c)
+            },
+            onchangeMonitorPage: function (c) {		
+               $('#CustomFlow').empty();
+               $('.loading').show();
+               $('.mp-list-select').remove();
+                initTree(b);
+            },
+            onSearchIpt:function(c){   
+            	var _this=this;
+            	$(document).on('input onpropertychange', '.mp-list-select .search-ipt', function(event) {  
+            		var inputStr=$.trim($(this).val());
+            		if(inputStr.length>0){  
+	            		for(var i=0;i<c.length;i++){
+	            			if(c[i].name.indexOf(inputStr)>-1){ 
+	            				$('.mp-list-select ul').css({'height':'auto'}).find('li').eq(i).show();
+	            			}else{
+	            				$('.mp-list-select ul').css({'height':'auto'}).find('li').eq(i).hide();
+
+	            			}
+	            		}
+            		}else{
+            			$('.mp-list-select ul li').css({'height':'auto'}).show();
+            		}   
+            	});
+            }
+
+        });
+    }
+    initTree(b);
+</script>
+</body>
+</html>
